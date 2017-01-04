@@ -1,0 +1,54 @@
+<html>
+	<head>
+	<meta charset="UTF-8">
+
+	</head>
+
+	<body>
+	<ul>
+		<li data-time ="5:45" >Test 1 Video</li>
+		<li data-time ="5:45" >Test 1 Video</li>
+		<li data-time ="5:45" >Test 1 Video</li>
+		<li data-time ="5:45" >Test 1 Video</li>
+		<li data-time ="4:35" >Test 2 Video</li>
+		<li data-time ="5:45" >Test 2 Video</li>
+		<li data-time ="3:35" >Test 1 Video</li>
+		<li data-time ="3:45" >Test 2 Video</li>
+		<li data-time ="2:25" >Test 1 Video</li>
+		<li data-time ="7:45" >Test 2 Video</li>
+		<li data-time ="8:45" >Test 1 Video</li>
+		<li data-time ="2:45" >Test 2 Video</li>
+		<li data-time ="9:35" >Test 1 Video</li>
+		<li data-time ="0:45" >Test 2 Video</li>
+		<li data-time ="4:45" >Test 1 Video</li>
+		<li data-time ="7:45" >Test 2 Video</li>
+		<li data-time ="2:35" >Test 1 Video</li>
+		<li data-time ="1:35" >Test 2 Video</li>
+	</ul>
+		<script>
+		//selecting all fields with the data time attibute
+			const items = Array.from(document.querySelectorAll('[data-time]'))
+
+			//selecting only those fields where its test video 1
+			const filteredItems = items
+			.filter(item => item.textContent.includes('Test 1 Video'))
+
+			//only get the data-time attribute from the list
+				.map(item => item.dataset.time)
+
+			//since now we have only the time set of all the li items now we gotta get the minutes and seconds in separate value
+			.map(separatedTime => {
+				const parts = separatedTime.split(':').map(part => parseFloat(part));
+				return (parts[0] * 60) + parts[1] ;
+			})
+
+
+			//get the total time into seconds
+			.reduce((runningTotal, seconds) => runningTotal + seconds, 0)
+			//another task may be convert them into hour minutes and seconds
+			
+			console.log(filteredItems );
+		</script>
+	</body>
+
+</html>

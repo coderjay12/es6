@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>
+			Promises Es6
+		</title>
+	</head>
+	<body>
+		<script>
+			const postPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
+
+			//then is fired when it has data and catch catches any error dat can take place
+			postPromise
+				.then( data => data.json())
+				.then(data => console.log(data))
+				.catch(err => {
+					console.log("Here Is THE ERROR")
+					console.error(err)
+				})
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+	<head>
+	<meta charset="UTF-8">
+
+	</head>
+
+	<body>
+	<button onclick='getSumCall()'>
+		Test Button
+	</button>
+	<div id="demo">	
+		
+	</div>
+		<script>
+			var numbers = [2, 3, 4, 5];
+			function getSum(total, num){
+				return total + num;
+				console.log('test');		}
+
+			function getSumCall(){
+				document.getElementById('demo').innerHTML = numbers.reduce(getSum) ;
+
+			}
+
+			
+		</script>
+	</body>
+
+</html>

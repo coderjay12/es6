@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>
+			Array Spread
+		</title>
+	</head>
+	<body>
+		<script>
+			const girls = ['deepika', 'katrina', 'barsha'];
+			const boys = ['niraj', 'anish', 'khem'];
+
+			//old esy of doing it..
+			let total = girls
+			total.push('someone')
+			total = total.concat(boys);
+
+			//new way of doing it
+			const all = [...girls, ...boys];
+
+			//old way of assigning (changing value on the new array results in changing the value of the old array because the new array just happens to reference to the old array)
+			// allGirls = girls
+
+			//this retains the value of the older array and assign the value to the new array @ da same time
+			
+			allGirls = [...girls]
+
+		</script>
+	</body>
+</html>

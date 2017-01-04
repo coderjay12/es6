@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>
+			Spread Exercise
+		</title>
+		<style>
+		.highlight span{
+			transform:0.3s;
+			display : inline-block;
+		},
+
+		.highlight span:hover{
+				transform: translateY(-20px);
+			}
+		</style>
+	</head>
+	<body>
+		<h2 class = 'highlight'>SPREAD</h2>
+		<script>
+
+		highlight = document.querySelector('.highlight')
+		highlight.innerHTML = splitWords(highlight.textContent) ;
+
+		function splitWords(toSplitt){
+			return [...toSplitt].map( splitted => `<span> ${splitted} </span>` ).join('');
+		}
+
+		</script>
+	</body>
+</html>

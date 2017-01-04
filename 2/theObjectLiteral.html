@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>
+			The Object Literals
+		</title>
+	</head>
+	<body>
+		<script>
+			const name = "Apacche";
+			const power = "160c"
+			const company = "TVS"
+			const style = "sporty"
+
+			const bikeDetails = {
+				name ,
+				power ,
+				company,
+				style,
+				owner : "Jyoti Duwal",
+				colors : ["red", "Black"]
+			}
+
+			const modal = {
+			  create(selector){//	create : function(selector){ 
+
+				},
+				confirm : function(){
+
+				},
+				close : function(){
+
+				}
+			}
+
+			const color = "red";
+			const part = "pocket";
+
+			function invertColor(color){
+				return "a test value for a while";
+			}
+
+			const details = {
+				[color] : part,
+				 [`${color}Opposite`] : invertColor(part)
+			}
+
+			console.log(details);
+
+			const shirtKeys = ['color', 'size', 'gender'];
+
+			const shirtValues = ['red', 'Medium', 'Female']
+
+			const shirtFullDetail = {
+				[shirtKeys.shift()] : shirtValues.shift(),
+				[shirtKeys.shift()] : shirtValues.shift(),
+				[shirtKeys.shift()] : shirtValues.shift(),
+			}
+
+		</script>
+	</body>
+</html>

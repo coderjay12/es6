@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>
+			The For Loop For Object
+		</title>
+	</head>
+	<body>
+		<div class="people">
+			<p>Jyoti</p>
+			<p>Niraj</p>
+			<p>Khem</p>
+		</div>
+		<script>
+
+		const people = document.querySelectorAll('.people p');
+
+		//people is now a nodeList which we can also call an arrayish value
+
+		//First Way of doing it
+
+		const peopleArray = Array.from(people);
+
+
+
+		const names = peopleArray.map( people => people.textContent );
+
+		// console.log(names);
+		//Another way of doing it array.from can also take second argument
+
+		const secondWay = Array.from(people, person => {
+			console.log(person)
+			return person.textContent ; 
+		})
+
+		numbers = [ 1, 2, 3, 5 ];
+
+		function sumAll(){
+			console.log(arguments);
+			argumentsArray = Array.from(arguments);
+			return argumentsArray.reduce( (first, second) => first + second, 0 );
+
+		}
+
+		
+		const totalAddedSum = sumAll(2, 3, 4, 5, 6);
+		console.log(totalAddedSum) ; 
+
+
+		const hot = Array.of('shruti', 'katrina', 'deepike');
+		
+
+		</script>
+	</body>
+</html>

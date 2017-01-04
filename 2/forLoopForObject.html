@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>
+			The For Loop For Object
+		</title>
+	</head>
+	<body>
+		For Loop and why we cant use other sort of Loops ...
+		<script>
+			const bikeDetails = {
+				name : "Apache",
+				power : "160cc",
+				color : "Red And Blac",
+				style : "Sporty"
+			}
+
+			// for(bikeDetail in bikeDetails){
+			// 	bikeDetails[bikeDetails]
+			// 	console.log(bikeDetail, bikeDetails[bikeDetail]);
+			// }
+
+
+			for(const bikeDetail of Object.keys(bikeDetails) ){
+				console.log(bikeDetail, bikeDetails[bikeDetail]);
+			}
+
+
+
+			console.log(bikeDetails);
+		</script>
+	</body>
+</html>

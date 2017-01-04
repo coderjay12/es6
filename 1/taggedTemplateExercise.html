@@ -1,0 +1,50 @@
+<html>
+<head></head>
+<title>Tagged Template Exercise</title>
+<body>
+	<div id="exercise">
+	</div>
+	<script>
+
+	function showAbbreviations(strings, ...values){
+		const abbreviated = values.map(value => {
+			if(dict[value]){
+				return `<abbr title = "${dict[value]}"> ${value} </abbrv>`; 
+			}
+
+			return value ; 
+
+		});
+
+		//console.log(strings);//takes in all the string parameters provided to the function..
+
+		return strings.reduce((sentence, string, i) => {
+			console.log(string);
+			return `${sentence}${string}${abbreviated[i] || ''}`;
+		}, '')
+		// return strings.reduce((s));
+
+	}
+
+	const dict = {
+		'HTML' : 'Hyper Text Mark Up Language',
+		'CSS' : 'Cascading Style Sheets',
+		'Js' : 'Javascript',
+		'PHP' : 'PHP Hypertext Protocol'
+	}	
+	const person = "Jyoti" 
+
+	const webDetail = showAbbreviations`${person} loves to code in ${'PHP'}, ${'HTML'}, ${'Js'} and ${'PHP'}`;
+	
+	const exercise = document.querySelector('#exercise');
+
+	const detail = document.createElement('p')
+	detail.innerHTML = webDetail 
+
+	exercise.appendChild(detail);
+
+	</script>
+<abbr title="something">something else</abbr>
+
+</body>
+</html>

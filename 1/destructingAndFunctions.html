@@ -1,0 +1,34 @@
+<html>
+<head></head>
+<title>Destructing And Functions</title>
+<body>
+	</div>
+		<script>
+			function converter(amt){
+				converted = {
+					USD : amt * 7,
+					AUD : amt * 10,
+					NP : amt * 20,
+				};
+
+				return converted ; 
+			}
+
+			const newCurrencyRate = converter(100);
+
+			console.log(newCurrencyRate.USD);
+
+			const { USD, AUD, NP } = converter(100);
+			console.log(USD, AUD, NP);
+
+
+			function calculateTip({ total = 200, tip = 0.15, tax = 0.20 }){
+				return total + (total*tip) + (total*tax);
+			}
+
+			const totalBill = calculateTip({  total : 100, tip : 0.10  });
+
+			console.log(totalBill);
+		</script>
+</body>
+</html>

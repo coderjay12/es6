@@ -1,0 +1,49 @@
+<html>
+<head></head>
+<title>Destructing And Functions</title>
+<body>
+	</div>
+		<p>I am number 1.</p>
+		<p>I am number 2.</p>
+		<p>I am number 3.</p>
+		<p>I am number 4.</p>
+		<p>I am number 5.</p>
+		<p>I am number 6.</p>
+		<p>I am number 7.</p>
+		<script>
+
+      // const bikes = [ 'apache', 'fz', 'pulsar', 'gixer' ] ;
+
+      // for(const [ i, bike ] of bikes.entries()){
+      // 	console.log(i + 1 , bike);
+      // }
+
+      function addNumbers(){
+      	let total = 0;
+
+      	for(number of arguments){
+      		total += number ; 
+      	}
+      	console.log(total);
+      	return total;
+      }
+
+      const addedNumbers = addNumbers(12, 34, 45, 67, 45, 34);
+
+      const allParagraphs = document.querySelectorAll('p');
+
+      console.log(allParagraphs);
+
+      for(const  paragraph of allParagraphs){
+
+     		 	paragraph.addEventListener("click", function(){_
+     		 		console.log(this.textContent);
+      	});
+      	// console.log(paragraph);
+      }
+
+
+
+		</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>
+			More Spread Examlples
+		</title>
+	</head>
+	<body>
+		<div class = 'heroines'>Heroines
+			<p>Priyanka</p>
+			<p>Barsha</p>
+			<p>Keki</p>
+			<p>Deepika</p>
+		</div>
+		<script>
+
+		// const heroines = Array.from(document.querySelectorAll('.heroines p'))
+			const heroines = [...document.querySelectorAll('.heroines p')]
+
+			const names = heroines.map( name => console.log(name.textContent))
+
+			  const techStuff = {
+			  	laptop : "MSI",
+			  	mobile : "colors",
+			  	bike : [ 'apache', 'trigger' ]
+			  }
+
+			  const allStuff = ['firstItem', 'secondItem', ...techStuff.bike ]
+
+			  const information = [
+			  	{ id : 11112, title : "first title" },
+			  	{ id : 22222, title : "second title" },
+			  	{ id : 32222, title : "third title" },
+			  	{ id : 44444, title : "second title" }
+			  ]
+
+			  const id = 32222
+			  const toBeRemoved = information.findIndex( information => information.id === id )
+
+			  const sanitized = [...information.slice(0,toBeRemoved),...information.slice(toBeRemoved + 1)]
+
+
+
+
+		</script>
+	</body>
+</html>

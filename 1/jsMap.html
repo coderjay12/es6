@@ -1,0 +1,20 @@
+<html>
+	<head>
+	<script>
+		var numbers = [2, 4, 6];
+		function getSquare(){
+			var toShow = document.getElementById('playground');
+			toShow.innerHTML = numbers.map(Math.sqrt);
+		}
+	</script>
+	</head>
+
+	<body>
+		<div id="playground">
+			
+		</div>
+
+		<button onclick="getSquare()">Test Button</button>
+	</body>
+
+</html>

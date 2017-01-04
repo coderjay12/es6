@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>
+			The For Loop
+		</title>
+	</head>
+	<body>
+		For Loop and why we cant use other sort of Loops ...
+		<script>
+			
+			const programmers = ['anish', 'mahesh', 'jyoti', 'prabesh'];
+
+			programmers.nicknames = ['haddi', 'sarkar'];
+
+			//one primitive way => confusing syntax
+			// for ( let i = 0 ; i < programmers.length ; i++){
+			// 	console.log(programmers[i]);
+			// }
+
+			//cannot use break or continue here
+			// programmers.forEach((programmer) => {
+			// 	console.log(programmer);
+			// 	if(programmer === "jyoti"){
+			// 		// break;
+			// 		// continue ; 
+			// 	}
+			// })
+
+			//iterates over any methods or properties added to the object
+			// for(const index in programmers){
+			// 	console.log(programmers[index]);
+			// }
+
+			for(const programmer of programmers){
+				console.log(programmer);
+				if(programmer === "jyoti"){
+					break;
+				}
+			}
+
+
+		</script>
+	</body>
+</html>

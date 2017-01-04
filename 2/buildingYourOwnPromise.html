@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>
+			Promises Es6
+		</title>
+	</head>
+	<body>
+		<script>
+			ownPromise = new Promise((resolve, reject) => {
+				// resolve("Code is Cool")
+
+				reject(Error('Soemthing seems to be wrong'));
+			});
+
+
+			ownPromise
+				.then(data => console.log(data))
+				.catch(error =>{
+					 console.error(error)
+				})
+		</script>
+	</body>
+</html>

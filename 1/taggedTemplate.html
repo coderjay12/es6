@@ -1,0 +1,36 @@
+<html>
+<head>
+	<style>
+		.tohighlight{
+			background: yellow; 
+		}
+	</style>
+</head>
+<title>Tagged Templates</title>
+<body>
+<div id="bikeDetails">
+	
+</div>
+<script>
+	const bikeName = "Apache RTR";
+	const cc = "160";
+	const color = "Red";
+
+	function highlightText(infos, ...values){
+		let finalInfo = '';
+
+		infos.forEach((info, i ) => {
+			finalInfo += `${info} <span contenteditable class = 'toHighlight'>${(values[i] || '')}</span>` ; 
+		});
+
+		return finalInfo ; 
+	}
+
+	const bikeDetails = highlightText`i have an ${ bikeName } and it is of ${ cc } cc and ${ color } in color .`;
+	document.getElementById('bikeDetails').innerHTML = bikeDetails ;
+
+	console.log(bikeDetails);
+</script>
+	
+</body>
+</html>

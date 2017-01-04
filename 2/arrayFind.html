@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>
+			The For Loop For Object
+		</title>
+	</head>
+	<body>
+		<script>
+		//use array find and array index
+			hotties = 
+			[
+				{
+					name : 'Barsha',
+					age : 27,
+					birthplace : "Laliptur"
+			  },
+			  	{
+					name : 'Barsha Shiwakoti',
+					age : 27,
+					birthplace : "Kathmandu"
+			  },
+			  	{
+					name : 'Barsha Raut',
+					age : 27,
+					birthplace : "Dudhpati"
+			  },
+			  	{
+					name : 'Indira Joshi',
+					age : 27,
+					birthplace : "Butwal"
+			  },
+
+			]
+
+			const searchQuery = "Barsha Shiwakoti";
+
+			const hottieDetail = hotties.find( detail => detail.name === searchQuery );
+
+			const hottieDetailIndex = hotties.findIndex( detail => detail.name === searchQuery);
+			console.log(hottieDetailIndex);
+
+			console.log(hottieDetail);
+		</script>
+	</body>
+</html>

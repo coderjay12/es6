@@ -1,0 +1,19 @@
+<html>
+<head></head>
+<title>Destructing Arrays</title>
+<body>
+	<div id="exercise">
+	</div>
+		<script>
+			const bikeDetails = [ 'Apache', 160 , 2000000]
+			const [ name, cc, price ] = bikeDetails ; 
+			console.log(name,cc, price);
+
+			const phoneDetails = "Samsung, J7, 13000, Good";
+			console.log(phoneDetails.split(','));
+			const [ phoneName, model, bikerPice, rating ] = phoneDetails.split(',');
+
+			console.log(phoneName, model, bikePrice, rating);
+		</script>
+</body>
+</html>

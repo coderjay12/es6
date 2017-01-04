@@ -1,0 +1,31 @@
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Other Arrow Function Example</title>
+
+	</head>
+	<body>
+
+	<script>
+		const race = '100 m Race'
+		const winners = ['Ram', 'Shyam', 'Hari' ];
+
+		const finalWinners = winners.map((winner, i) => ({
+			name : winner,
+			race ,
+			position : i +1
+		}));
+
+		console.table(finalWinners);
+
+		const luckyNumbers = [12, 45, 56,89,23, 67]
+
+		const filteredLuckyNumbers = luckyNumbers.filter(luckyNumber => luckyNumber >= 50 )
+
+		console.log(filteredLuckyNumbers);
+
+	</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>
+			Spreading Into A Function
+		</title>
+	</head>
+	<body>
+		<script>
+		const oldFramework = ['Angular', 'React', 'Vanilla']
+		const newFramework = ['Vue', 'Node']
+
+		// oldFramework.push.apply(oldFramework, newFramework)
+
+		oldFramework.push(...newFramework)
+
+		function sayHi(first, last){
+			alert(`Hi ${first} ${last}`)
+		}
+
+		const name = ['Mark', 'JuckerBerg'];
+		sayHi(...name);
+		</script>
+	</body>
+</html>

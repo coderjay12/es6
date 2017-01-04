@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>
+			The Rest Params
+		</title>
+	</head>
+	<body>
+		<script>
+		  function calculate(rate, ...amounts){
+		  	return amounts.map(amount => amount*rate);
+		  }
+
+		  const converted = calculate(0.5, 45, 12,34)
+
+		  //wen we want to save value assuming the first element to be runner's name second to be id and the rest to be distance he has covered till today
+
+		  const runner = [ 'Jyoti Duwal', 32, 12,45,23 ];
+
+		  const [name, id, ...events] = runner
+
+		  console.log(name, id, events);
+
+
+		</script>
+	</body>
+</html>

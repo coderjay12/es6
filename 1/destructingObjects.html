@@ -1,0 +1,41 @@
+<html>
+<head></head>
+<title>Destructing Objects</title>
+<body>
+	<div id="exercise">
+	</div>
+	<script>
+		const person = {
+			first : "Jyoti",
+			last : "Duwal",
+			profession : "Programmer",
+			facebook : "fb.com/rockerjay12"
+		}
+
+		const { first, facebook} = person ;
+		console.log(first);
+		console.log(facebook);
+
+			const second = {
+				first : "Madhu",
+				last : "DuwalSubedi",
+				profession : "Programmer",
+				social : {
+				  facebook : "fb.com/madhu"
+				}
+			}
+
+			const { facebook:fbMadhu  } = second.social ; 
+			console.log(fbMadhu);
+
+			const settings = { width : 110, height: 234 };
+
+			//passing default values 
+			const { width = 100 , height, thickness = 34 } = settings;
+			console.log(thickness);
+
+			const { n: name = "Jyoti" } = { surname : "Duwal" }
+			console.log(name);
+	</script>
+</body>
+</html>

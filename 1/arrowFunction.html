@@ -1,0 +1,56 @@
+<html>
+	<head>
+	<meta charset="UTF-8">
+
+	</head>
+
+	<body>
+
+	<script>
+		const names = ['First', 'Second', 'Third'];
+
+		//feeding function to the map
+		const fullNames = names.map(function(name){
+			return name + " Person";
+		});
+
+		console.log("Full Names 1 " + fullNames);
+
+		//feeding arrow instead of function
+		const fullNames2 = names.map((name) => {
+			return name + "Person";
+		});
+		console.log("Full Names 2 " + fullNames2);
+
+		//feeding arrow instead of function removing paranthesis in case of only one argument
+		const fullNames3 = names.map(name => {
+			return name + "Person";
+		});
+		console.log("Full Names 3 " + fullNames3);
+
+		//feeding arrow instead of function
+		const fullNames4 = names.map((name) => {
+			return name + "Person";
+		});
+		console.log("Full Names 4 " + fullNames4);
+
+		//feeding arrow instead of function
+		const fullNames5 = names.map(name =>  "${name} Person "	);
+		console.log("Full Names 5 " + fullNames5);
+
+		//returning without return statement
+		const fullNames6 = names.map(() =>  "Every Person "	);
+		console.log("Full Names" + fullNames6);
+
+		//above all are examples of an anonymous functions
+
+		const displayMyJob = (jobTitle) => { 
+			console.log("You are a " + jobTitle)
+			};
+		displayMyJob("Programmer");
+
+	</script>
+
+	</body>
+
+</html>

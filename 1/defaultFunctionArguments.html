@@ -1,0 +1,21 @@
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Default Function Arguments</title>
+	</head>
+
+	<body>
+
+		<script>
+			function calculateTotalTripFee(planeCost, tax = 34, tip = 4)
+			{
+				return planeCost + tax + tip;
+			}
+
+			const totalCost = calculateTotalTripFee(45, 2, 5);
+			console.log(totalCost);
+		</script>
+
+	</body>
+
+</html>

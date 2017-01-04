@@ -1,0 +1,99 @@
+<html>
+<head></head>
+<title>Creating Html Fragment</title>
+<body>
+	<B><u>Showing Simple Example of HTML Fragment</u></B>
+	<div id="showExampleOfHtmlFragement">
+	</div>
+
+	<b><u>Using Loops through HTML Fragment</u></b>
+	<div id="useLoopThroughHtmlFragment">
+		
+	</div>
+
+	<b><u>Using Conditional Loops on Html Fragments</u></b>
+	<div id="conditionalHtmlFragmetns">
+		
+	</div>
+
+	<b><u>Using Methods Inside of Html Fragments</u></b>
+	<div id="usingMethodsInsideHtmlFragmetns">
+		
+	</div>
+
+	<script>
+		var person = {
+			name : "Jyoti",
+			profession : " Programmer",
+			hobby : "Loves to build cool objects"
+		}
+
+		var detail = ` <h2>${person.name}</h2>
+			${person.name} is ${person.profession} By Profession.
+			<p>
+			<span>He ${person.hobby} </span>
+
+
+		`;
+		document.getElementById('showExampleOfHtmlFragement').innerHTML = detail;
+
+		var samsungPhones = [
+			{ model : 'J2', price : '5000' },
+			{ model : 'J3', price : '6000' },
+			{ model : 'J4', price : '7000' },
+		]
+
+		var phoneDetails = `
+			<ul>
+			${samsungPhones.map(samsungPhone => 
+					`
+					<li>
+						${samsungPhone.model} = ${samsungPhone.price}
+					</li>
+					`
+				).join('')}
+
+			</ul>
+		`
+		document.getElementById('useLoopThroughHtmlFragment').innerHTML = phoneDetails;
+
+		var movies = [
+			{ name : "James Bond", cast : "Rajesh Hamal", adultMovie: false},
+			{ name : "GOT", cast : "Messie", adultMovie: true}
+		]
+
+		const movieInfo = `
+			<ul>
+				${movies.map(movie => 
+						`
+							<li>
+								${ movie.name } starring
+								<i> ${ movie.cast }
+								${ movie.adultMovie ? "Adult Movie" : "Any Age" }
+							</li>
+						`
+					).join('')}
+			</ul>
+		`
+		document.getElementById('conditionalHtmlFragmetns').innerHTML = movieInfo ;
+
+		const tvsBike = {
+			brandName : 'TVS',
+			originCountry : "Spain",
+			category : "Sports",
+			popularBikes : ['Apache 160', 'Apace 180', 'Apache 200']
+		}
+
+		function render(entities){
+			return `${entities.map(entitiy => `<li>${entitiy}</li>`).join('')} `
+		}
+
+		const tvsBikeInfo = `
+			${ tvsBike.brandName }
+			${ render(tvsBike.popularBikes) }
+		`
+		document.getElementById('usingMethodsInsideHtmlFragmetns').innerHTML = tvsBikeInfo ;
+
+	</script>
+</body>
+</html>
